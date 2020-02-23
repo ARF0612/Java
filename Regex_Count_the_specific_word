@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class main{
+    public static void main(String args[]){
+        regex tes = new regex();
+        tes.cek("______");
+    }
+}
+
+
+class regex {
+    
+    public void cek(String Regex_Pattern){
+    
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
+    
+        Pattern p = Pattern.compile(Regex_Pattern);
+        Matcher m = p.matcher(s);
+        int jumlah = 0;
+        while (m.find()){
+            jumlah++;
+        }
+        System.out.println("Kata yang mirip = "+jumlah);
+    }
+    
+}
